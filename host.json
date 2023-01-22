@@ -1,0 +1,31 @@
+{
+  "version": "2.0",
+  "extensions": {
+    "durableTask": {
+      "hubName": "MyTaskHub2",
+      "storageProvider": {
+        "maxQueuePollingInterval": "00:05:00",
+        "partitionCount": 1,
+        "controlQueueBatchSize": 1,
+        "controlQueueBufferThreshold": 1
+      },
+      "maxConcurrentActivityFunctions": 1,
+      "maxConcurrentOrchestratorFunctions": 1
+    }
+  },
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      }
+    }
+  }
+}
+
+//AzureFunctionsJobHost__extensions__durableTask__storageProvider__controlQueueBatchSize
+//AzureFunctionsJobHost__extensions__durableTask__storageProvider__controlQueueBufferThreshold
+//AzureFunctionsJobHost__extensions__durableTask__storageProvider__maxQueuePollingInterval
+//AzureFunctionsJobHost__extensions__durableTask__storageProvider__partitionCount
+//AzureFunctionsJobHost__extensions__durableTask__maxConcurrentActivityFunctions
+//AzureFunctionsJobHost__extensions__durableTask__maxConcurrentOrchestratorFunctions
